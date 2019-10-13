@@ -1,0 +1,25 @@
+function CountingSort(A)
+
+  //Arr[]-- Initial Array to Sort
+  
+  for i = 0 to k do
+  c[i] = 0
+  
+  //Storing Count of each element
+  
+  for j = 0 to n do
+  c[ Arr[j] ] = c[ Arr[j] ] + 1
+  
+  // Change c[i] such that it contains actual position of these elements in output array
+  
+  for i = 1 to k do
+  c[i] = c[i] + c[i-1]
+  
+  //Build Output array from C[i]
+  
+  for j = n - 1 down to 0
+  do
+  B[ c[Arr[j]] - 1 ] = Arr[j]
+  c[ Arr[j] ] = c[ Arr[j] ] - 1
+  
+end func
