@@ -49,7 +49,7 @@ void CountingSort(vector<int> &A, vector<int> &Aux, vector<int> &sorted) {
 int main()
 {
     vector<int> A{5,2,9,5,2,3,5};
-    vector<int> Aux{0,0,2,1,0,3,0,0,0,2};  //Aux stores count of element 'i'
+    vector<int> Aux{0,0,2,1,0,3,0,0,0,2};  //Aux stores count of element 'i' in 'A'
     vector<int> sorted(A.size());
     
     CountingSort(A,Aux,sorted);
