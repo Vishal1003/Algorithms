@@ -24,7 +24,3 @@ Heap sort is a comparison based sorting technique based on Binary Heap data stru
 
 ## Counting Sort
 Counting sort is a sorting technique based on keys between a specific range. It works by counting the number of objects having distinct key values (kind of hashing). Then doing some arithmetic to calculate the position of each object in the output sequence.
-
-## Radix Sort
-The lower bound for Comparison based sorting algorithm (Merge Sort, Heap Sort, Quick-Sort .. etc) is Ω(nLogn), i.e., they cannot do better than nLogn.
-Counting sort is a linear time sorting algorithm that sort in O(n+k) time when elements are in range from 1 to k.
