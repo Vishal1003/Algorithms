@@ -24,3 +24,10 @@ Heap sort is a comparison based sorting technique based on Binary Heap data stru
 
 ## Counting Sort
 Counting sort is a sorting technique based on keys between a specific range. It works by counting the number of objects having distinct key values (kind of hashing). Then doing some arithmetic to calculate the position of each object in the output sequence.
+
+## Comb Sort
+Comb Sort is mainly an improvement over Bubble Sort. Bubble sort always compares adjacent values. So all inversions are removed one by one. Comb Sort improves on Bubble Sort by using gap of size more than 1. The gap starts with a large value and shrinks by a factor of 1.3 in every iteration until it reaches the value 1. Thus Comb Sort removes more than one inversion counts with one swap and performs better than Bubble Sort.
+
+The shrink factor has been empirically found to be 1.3 (by testing Combsort on over 200,000 random lists)
+
+Although, it works better than Bubble Sort on average, worst case remains O(n2).
