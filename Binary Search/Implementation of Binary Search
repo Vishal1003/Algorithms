@@ -1,0 +1,26 @@
+int bsearch(int key, int data[], int size) {
+	int found = 0;
+	int position = -1;
+	int first = 0;
+	int last = size-1;
+	while(first<=last && !found)
+	{
+		int mid = (first+last)/2;
+		if(data[mid]==key)
+		{ 
+			found = 1;
+			position = mid; 
+		}
+		else if(data[mid]>key)
+			last = mid-1;
+		else
+			first = mid+1;
+	}
+	return position;
+}
+void main(void){
+  int key = 10;
+  int d[]={1,2,3,3,5,6,7,8,9,10,11,12,12,14,15,16,17,18,18,20};
+  int size = 20;
+  printf("The index: %d", bsearch(key, d, size));
+}
