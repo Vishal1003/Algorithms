@@ -76,3 +76,10 @@ An exponential search is a combination of two methods:
 To begin a search, we find the range. We do this by first checking to see if the desired element is in the first position. If not, we try an array size of 2, then 4, then 6... and so on. If the last element in the partial array is not greater than the element, we perform a binary search.
 
 In order for exponential search to work the array must be sorted!
+
+### Breadth First Search
+Breadth First Search(BFS) is an algorithm that explores nodes from a starting node on a graph.
+
+First, it visits all immediate neighbors, then immediate neighbors of immediate neighbors until all nodes that can be reached are visited.
+
+In BFS, nodes with shorter distance from starting node are always placed before than nodes with greater distance and thus can be used to find shortest path between two nodes in unweighted graphs. 
