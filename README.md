@@ -34,6 +34,11 @@ The shrink factor has been empirically found to be 1.3 (by testing Combsort on o
 
 Although, it works better than Bubble Sort on average, worst case remains O(n2).
 
+### Bitonic Sort 
+Bitonic Sort is a classic parallel algorithm for sorting.
+Bitonic sort does O(n Log 2n) comparisons.
+The number of comparisons done by Bitonic sort are more than popular sorting algorithms like Merge Sort [ does O(nLogn) comparisons], but Bitonice sort is better for parallel implementation because we always compare elements in predefined sequence and the sequence of comparison doesn’t depend on data. Therefore it is suitable for implementation in hardware and parallel processor array.
+
 
 ## Searching Algorithms
 
