@@ -68,5 +68,11 @@ The Interpolation Search is an improvement over Binary Search for instances, whe
 ### Exponential Search
 The name of this searching algorithm may be misleading as it works in O(Log n) time. The name comes from the way it searches an element.
 
+An exponential search is a combination of two methods:
 
+- Find the range in which the element exists.
+- Perform a binary search in that range.
 
+To begin a search, we find the range. We do this by first checking to see if the desired element is in the first position. If not, we try an array size of 2, then 4, then 6... and so on. If the last element in the partial array is not greater than the element, we perform a binary search.
+
+In order for exponential search to work the array must be sorted!
