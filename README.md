@@ -66,7 +66,6 @@ Linear Search finds the element in O(n) time, Jump Search takes O(√ n) time an
 The Interpolation Search is an improvement over Binary Search for instances, where the values in a sorted array are uniformly distributed. Binary Search always goes to the middle element to check. On the other hand, interpolation search may go to different locations according to the value of the key being searched. For example, if the value of the key is closer to the last element, interpolation search is likely to start search toward the end side.
 
 ### Exponential Search
-The name of this searching algorithm may be misleading as it works in O(Log n) time. The name comes from the way it searches an element.
-
+The name of this searching algorithm may be misleading as it works in O(Log n) time. The name comes from the way it searches an element.Exponential search can also be used to search in bounded lists. Exponential search can even out-perform more traditional searches for bounded lists, such as binary search, when the element being searched for is near the beginning of the array.
 
 
