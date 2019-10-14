@@ -34,6 +34,11 @@ The shrink factor has been empirically found to be 1.3 (by testing Combsort on o
 
 Although, it works better than Bubble Sort on average, worst case remains O(n2).
 
+### Bitonic Sort 
+Bitonic Sort is a classic parallel algorithm for sorting.
+Bitonic sort does O(n Log 2n) comparisons.
+The number of comparisons done by Bitonic sort are more than popular sorting algorithms like Merge Sort [ does O(nLogn) comparisons], but Bitonice sort is better for parallel implementation because we always compare elements in predefined sequence and the sequence of comparison doesn’t depend on data. Therefore it is suitable for implementation in hardware and parallel processor array.
+
 
 ## Searching Algorithms
 
@@ -62,17 +67,6 @@ The Interpolation Search is an improvement over Binary Search for instances, whe
 
 ### Exponential Search
 The name of this searching algorithm may be misleading as it works in O(Log n) time. The name comes from the way it searches an element.
-`
-Given a sorted array, and an element x to be 
-searched, find position of x in the array.
-
-Input:  arr[] = {10, 20, 40, 45, 55}
-        x = 45
-Output: Element found at index 3
-
-Input:  arr[] = {10, 15, 25, 45, 55}
-        x = 15
-Output: Element found at index 1
 
 An exponential search is a combination of two methods:
 
