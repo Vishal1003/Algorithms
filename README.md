@@ -1,8 +1,5 @@
 # Important Algorithms
 
-## Sorting Algorithms
-Important Sorting Algorithms
-
 ### Selection Sort
 The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order) from unsorted part and putting it at the beginning. The algorithm maintains two subarrays in a given array.
 
@@ -39,14 +36,6 @@ Bitonic Sort is a classic parallel algorithm for sorting.
 Bitonic sort does O(n Log 2n) comparisons.
 The number of comparisons done by Bitonic sort are more than popular sorting algorithms like Merge Sort [ does O(nLogn) comparisons], but Bitonice sort is better for parallel implementation because we always compare elements in predefined sequence and the sequence of comparison doesn’t depend on data. Therefore it is suitable for implementation in hardware and parallel processor array.
 
-
-## Searching Algorithms
-
-There are two categories of searching algorithms-
-1. Sequential Search: In this, the list or array is traversed sequentially and every element is checked. For example: Linear Search.
-(these are easy)
-
-2. Interval Search: These algorithms are specifically designed for searching in sorted data-structures. These type of searching algorithms are much more efficient than Linear Search as they repeatedly target the center of the search structure and divide the search space in half. For Example: Binary Search.
 
 ### Binary Search
 Given a sorted array arr[] of n elements, write a function to search a given element x in arr[].
