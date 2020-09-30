@@ -83,3 +83,8 @@ Breadth First Search(BFS) is an algorithm that explores nodes from a starting no
 First, it visits all immediate neighbors, then immediate neighbors of immediate neighbors until all nodes that can be reached are visited.
 
 In BFS, nodes with shorter distance from starting node are always placed before than nodes with greater distance and thus can be used to find shortest path between two nodes in unweighted graphs. 
+
+### Flood Fill Algorithm
+
+Flood fill, also called seed fill, is an algorithm that determines the area connected to a given node in a multi-dimensional array. It is used in the "bucket" fill tool of paint programs to fill connected, similarly-colored areas with a different color, and in games such as Go and Minesweeper for determining which pieces are cleared.
+
