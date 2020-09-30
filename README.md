@@ -83,3 +83,11 @@ Breadth First Search(BFS) is an algorithm that explores nodes from a starting no
 First, it visits all immediate neighbors, then immediate neighbors of immediate neighbors until all nodes that can be reached are visited.
 
 In BFS, nodes with shorter distance from starting node are always placed before than nodes with greater distance and thus can be used to find shortest path between two nodes in unweighted graphs. 
+
+## Dynamic Programming
+
+Dynamic programming is both a mathematical optimization method and a computer programming method. Likewise, in computer science, if a problem can be solved optimally by breaking it into sub-problems and then recursively finding the optimal solutions to the sub-problems, then it is said to have optimal substructure.
+
+### Kadane's Algorithm
+Kadane's algorithm is a Dynamic Programming approach to solve “the largest contiguous elements in an array” with runtime of O(n). In this blog post we rewrote the algorithm to use an array instead of sum (which needs more space to hold them) that makes it a bit more easier to understand.
+[ALGORITHM](https://github.com/shubhdeep123/Algorithms/blob/kadaneAlgo/kadaneAlgo.md)
