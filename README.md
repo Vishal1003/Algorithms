@@ -79,3 +79,6 @@ Flood fill, also called seed fill, is an algorithm that determines the area conn
 
 [ALGORITHM](https://github.com/sahanihit/Algorithms/blob/master/Flood%20Fill%20Algorithm.md)
 
+### Kadane's Algorithm
+Kadane's algorithm is a Dynamic Programming approach to solve “the largest contiguous elements in an array” with runtime of O(n). In this blog post we rewrote the algorithm to use an array instead of sum (which needs more space to hold them) that makes it a bit more easier to understand.
+[ALGORITHM](https://github.com/shubhdeep123/Algorithms/blob/Kalgo/kadaneAlgo.md)
