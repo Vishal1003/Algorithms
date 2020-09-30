@@ -79,3 +79,9 @@ Flood fill, also called seed fill, is an algorithm that determines the area conn
 
 [ALGORITHM](https://github.com/sahanihit/Algorithms/blob/master/Flood%20Fill%20Algorithm.md)
 
+### Floyd Cycle
+This is used to detect the loop in a linked list if any.
+
+### Longest Increasing Subsequence
+I have provided the O(n*n), shortly will be updating O(nlogn)
+
