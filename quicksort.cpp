@@ -70,6 +70,4 @@ int main()
     cout << "Sorted array: \n";  
     printArray(arr, n);  
     return 0;  
-}  
-  
-// This code is contributed by Amrit Ohri
+} 
