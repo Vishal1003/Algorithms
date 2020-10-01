@@ -1,0 +1,52 @@
+// KAHN'S ALGORITHM FOR TOPSORT ORDERING
+// IT USES THE CONCEPT OF INDEGREE
+#include<bits/stdc++.h>
+
+using namespace std;
+
+vector<int> ar[10001];
+vector<int> ans;
+int inDegree[10001];
+
+void kahn(int n)
+{
+    queue<int> q;
+    for(int i=1;i<=n;++i)
+       if(inDegree[i]==0)
+         q.push(i);
+
+    while(!q.empty())
+    {
+        int curr = q.front();
+        ans.push_back(curr);
+
+        q.pop();
+
+        for(int child : ar[curr])
+        {
+            inDegree[child]--;
+            if(inDegree[child]==0)
+               q.push(child);
+        }
+    }
+}
+
+int main()
+{
+    int n , m , a , b;
+
+    cout<<"Enter the number of vertices and number of edges: ";
+    cin>>n>>m;
+    for(int i=1;i<=n;++i)    inDegree[i] = 0;
+    cout<<"\nEnter the values of graph:\n";
+    while(m--)
+     cin>>a>>b , ar[a].push_back(b) , inDegree[b]++;
+
+    kahn(n);
+
+    cout<<"\nTop sort order is:\n";
+    for(int i=0;i<ans.size();++i)
+      cout<<ans[i]<<" ";
+
+    return 0;
+}
