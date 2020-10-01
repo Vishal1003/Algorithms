@@ -1,0 +1,78 @@
+include <bits/stdc++.h>
+using namespace std;
+
+class graph
+{
+	public:
+	map <int ,list<pair <int,int>>> mp;
+	void addWord(int x,int y, int r)
+	{
+		mp[x].push_back(make_pair(y,r));
+		mp[y].push_back(make_pair(x,r));
+	}
+
+	void dijkstras(int src)
+	{
+		map <int ,int>dist;
+		for(auto i : mp)
+			dist[i.first]=INT_MAX;
+		dist[src]=0;
+        /*for(auto i : dist)
+            cout<<i.first<<" "<<i.second<<endl;
+		*/
+		set<pair<int,int>> s;
+		s.insert(make_pair(dist[src] , src));
+		while(!s.empty())
+		{
+
+			auto f=*(s.begin());
+			s.erase(s.begin());
+            int node=f.second;
+			int distance=f.first;
+			for(auto i : mp[node])
+			{
+				if(distance+i.second < dist[i.first])
+				{
+					auto l=s.find(make_pair(dist[i.first] , i.first));
+					if(l!=s.end())
+						s.erase(l);
+					dist[i.first]=distance+i.second;
+                    s.insert(make_pair(dist[i.first] , i.first));	
+				}
+			}
+		}
+		//cout<<"hello";
+		for(auto i : dist)
+		{
+			if(i.second==0)
+                continue;
+            if(i.second==INT_MAX)
+            {   
+                cout<<"-1"<<endl;
+                continue;
+            }
+            cout<<i.second<<endl;
+		}
+	}
+};
+int main()
+{
+	int t;
+    cin>>t;
+    while(t)
+    {
+        graph g;
+        int n,m;
+        cin>>n>>m;
+        for(int i=0; i<m; i++)
+        {
+            int x,y,r;
+            cin>>x>>y>>r;
+            g.addWord(x,y,r);
+        }
+        int source;
+        cin>>source;
+        g.dijkstras(source);
+        t--;
+    }
+}
