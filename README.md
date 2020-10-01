@@ -72,8 +72,8 @@ As the name BFS suggests, you are required to traverse the graph breadthwise as 
 1. First move horizontally and visit all the nodes of the current layer
 2. Move to the next layer 
 
-[ALGORITHM](https://github.com/Mu-C00L/Algorithms/blob/master/BFS%20Algorithm)
-[CODE](https://github.com/Mu-C00L/Algorithms/blob/master/BFS)
+-[ALGORITHM](https://github.com/Mu-C00L/Algorithms/blob/master/BFS%20Algorithm)
+-[CODE](https://github.com/Mu-C00L/Algorithms/blob/master/BFS)
 
 
 ### Flood Fill Algorithm
