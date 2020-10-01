@@ -67,11 +67,14 @@ To begin a search, we find the range. We do this by first checking to see if the
 In order for exponential search to work the array must be sorted!
 
 ### Breadth First Search
-Breadth First Search(BFS) is an algorithm that explores nodes from a starting node on a graph.
+BFS is a traversing algorithm where you should start traversing from a selected node (source or starting node) and traverse the graph layerwise thus exploring the neighbour nodes (nodes which are directly connected to source node). You must then move towards the next-level neighbour nodes.
+As the name BFS suggests, you are required to traverse the graph breadthwise as follows:
+1. First move horizontally and visit all the nodes of the current layer
+2. Move to the next layer 
 
-First, it visits all immediate neighbors, then immediate neighbors of immediate neighbors until all nodes that can be reached are visited.
+[ALGORITHM](https://github.com/Mu-C00L/Algorithms/blob/master/BFS%20Algorithm)
+[CODE](https://github.com/Mu-C00L/Algorithms/blob/master/BFS)
 
-In BFS, nodes with shorter distance from starting node are always placed before than nodes with greater distance and thus can be used to find shortest path between two nodes in unweighted graphs. 
 
 ### Flood Fill Algorithm
 
