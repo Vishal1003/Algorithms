@@ -82,3 +82,7 @@ Flood fill, also called seed fill, is an algorithm that determines the area conn
 ### Kadane's Algorithm
 Kadane's algorithm is a Dynamic Programming approach to solve “the largest contiguous elements in an array” with runtime of O(n). In this blog post we rewrote the algorithm to use an array instead of sum (which needs more space to hold them) that makes it a bit more easier to understand.
 [ALGORITHM](https://github.com/shubhdeep123/Algorithms/blob/Kalgo/kadaneAlgo.md)
+
+### Kruskal's Algorithm (Minimum Spanning Tree)
+Kruskal's algorithm finds a minimum spanning forest of an undirected edge-weighted graph. If the graph is connected, it finds a minimum spanning tree. (A minimum spanning tree of a connected graph is a subset of the edges that forms a tree that includes every vertex, where the sum of the weights of all the edges in the tree is minimized. For a disconnected graph, a minimum spanning forest is composed of a minimum spanning tree for each connected component.) It is a greedy algorithm in graph theory as in each step it adds the next lowest-weight edge that will not form a cycle to the minimum spanning forest.
+[ALGORITHM](https://github.com/shubhdeep123/Algorithms/blob/kruskal/kruskalAlgo.md)
