@@ -4,7 +4,7 @@ Suppose we want to do the following operation. We want to find the **sum of all 
 
 1. We can naively calculate the sum from all elements in the **range [l,r)** in `O(N)`, i.e. linear time. This is too slow. But the advantage we have is that we can update the elements in constant time, `O(1)`.
 
-2. Second type is that we can calculate the prefix sum of the array. This requires pre-processing of `O(N)` time. But we can answer the queries to find the sum of elements in the range from [l,r) in `O(1)` time. But now, updating the element at a particular index now takes `O(N)` time, as if we change the first element we need to precompute the prefix sum of the entire array.
+2. Second type is that we can calculate the prefix sum of the array. This requires pre-processing of `O(N)` time. But we can answer the queries to find the sum of elements in the range from `[l,r)` in `O(1)` time. But now, updating the element at a particular index now takes `O(N)` time, as if we change the first element we need to precompute the prefix sum of the entire array.
 
 3. We can use segment trees. Segment trees allow to query the value of some function applied in the range [l,r) in `O(logN)` time. We can update the element in a particular index in `O(logN)` time too. This is quite fast.
 
@@ -23,7 +23,8 @@ Now let's look at how to do operations on such a tree.
 
 ## **Operation set**
 
-Let's start with the operation `set`. When the element of the array changes, you need to change the corresponding number in the leaf node of the tree, and then recalculate the values ​​that will change from this. These are the values ​​that are higher up the tree from the modified leaf. We can simply recalculate the value in each node as the sum of the values ​​in children.
+Let's start with the operation `set`. When the element of the array changes, you need to change the corresponding number in the leaf node of the tree, and then recalculate the values that will change from this. These are the values that are higher up the tree from the modified leaf. We can simply recalculate the value in each node as the sum of the values in children.
+
 ![enter image description here](https://espresso.codeforces.com/2adeb7419495bbf9ed0dc0dcc64d8bdfd16aaac8.png)
 
 When performing such an operation, we need to recalculate one node on each layer of the tree. We have only `logN` layers, so the operation time will be `O(logN)`.
@@ -36,7 +37,7 @@ Now let's look at how to calculate the sum on a segment. To do this, let's first
 
 In this case, for example, the number in the root is the sum over the entire array, and the numbers in the leaves are the sum over the segment of one element.
 
-Let's try to build the sum on the segment [l..r)[l..r) from these already calculated sums. To do this, run a recursive traversal of the segment tree. In this case, we will interrupt recursion in two situations.
+Let's try to build the sum on the segment `[l..r)` from these already calculated sums. To do this, run a recursive traversal of the segment tree. In this case, we will interrupt recursion in two situations.
 
 - The segment corresponding to the current node does not intersect the segment `[l..r)`. In this case, all the elements in this subtree are outside the area in which we need to calculate the sum, so we can stop the recursion.
 - The segment corresponding to the current node is entirely nested in the segment `[l..r)`. In this case, all the elements in this subtree are in the area in which we need to calculate the sum, so we need to add to the answer their sum, which is recorded in the current node.
