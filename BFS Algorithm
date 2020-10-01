@@ -1,0 +1,19 @@
+BFS(G, s)
+ for each vertex u ∈ V [G] – {s}
+  do color[u] ← WHITE
+    d[u] ← ∞
+    π[u] ← NIL
+ color[s] ← GRAY
+ d[s] ← 0
+ π[s] ← NIL
+ Q ← 0
+ ENQUEUE(Q, s)
+ while Q ≠ 0
+  do u ← DEQUEUE(Q)
+    for each ∈ Adj[u]
+      do if color[v] = WHITE
+        then color[v] ← GRAY
+ d[v] ← d[u] + 1
+          π[v] ← u
+          ENQUEUE(Q, v)
+color[u] ← BLACK
