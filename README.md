@@ -106,4 +106,4 @@ Topological sort of a directed acyclic graph [DAG] is partial ordering of its no
 Kahn’s algorithm I implemented, instead produces a linear ordering such that […, U, …, V, …] means there may be a path from U to V, but not vice versa. [ALGORITHM](https://github.com/Harshit564/Algorithms/blob/master/topologicalsort.md)
 ## Cycle Detection in Directed Graph
 Given a directed graph, this program checks whether the graph conatins a cycle or not. The function returns true if the graph conatins at least one cycle , else returns false. Here we use DFS (Depth First Search) to detect the cycle.DFS for a connected graph produces a tree. There is a cycle in a graph only if there is a back edge present in the graph. A back edge is an edge that is from a node to itself (self-loop) or one of its ancestors in the tree produced by DFS.
-[ALGORITHM]
+[ALGORITHM](CycleDetectionDirectedGraph.cpp).
