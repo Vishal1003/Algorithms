@@ -36,6 +36,16 @@ Bitonic Sort is a classic parallel algorithm for sorting.
 Bitonic sort does O(n Log 2n) comparisons.
 The number of comparisons done by Bitonic sort are more than popular sorting algorithms like Merge Sort [ does O(nLogn) comparisons], but Bitonice sort is better for parallel implementation because we always compare elements in predefined sequence and the sequence of comparison doesn’t depend on data. Therefore it is suitable for implementation in hardware and parallel processor array.
 
+### Insertion Sort
+Insertion Sort is a very simple sorting algorithm which works similar to the way we arrange playing card in our hands. In this method the array is virtually split into two parts one being sorted and other being unsorted. 
+
+Let's take an array of size n then,
+Set the iterator pointing to arr[1]
+Compare the current element to its predecessor
+loop through this comparison with predecessor until you find the correct position of the current element
+increment the iterator
+
+Insertion sort works best for already sorted or almost sorted array with time complexity O(n), whereas worst case time complexity being o(n^2).
 
 ### Binary Search
 Given a sorted array arr[] of n elements, write a function to search a given element x in arr[].
