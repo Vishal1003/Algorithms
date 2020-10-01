@@ -99,3 +99,8 @@ Union-Find Algorithm can be used to check whether an undirected graph contains c
 Kruskal's algorithm finds a minimum spanning forest of an undirected edge-weighted graph. If the graph is connected, it finds a minimum spanning tree. (A minimum spanning tree of a connected graph is a subset of the edges that forms a tree that includes every vertex, where the sum of the weights of all the edges in the tree is minimized. For a disconnected graph, a minimum spanning forest is composed of a minimum spanning tree for each connected component.) It is a greedy algorithm in graph theory as in each step it adds the next lowest-weight edge that will not form a cycle to the minimum spanning forest.
 [ALGORITHM](https://github.com/shubhdeep123/Algorithms/blob/kruskal/kruskalAlgo.md)
 
+### Topographical Sorting in a DAG (directed acyclic graph)
+Topological sort of a directed acyclic graph [DAG] is partial ordering of its nodes such that U < V implies there must not exist a path from V to U.
+
+
+Kahn’s algorithm I implemented, instead produces a linear ordering such that […, U, …, V, …] means there may be a path from U to V, but not vice versa. [ALGORITHM](https://github.com/Harshit564/Algorithms/blob/master/topologicalsort.md)
