@@ -1,0 +1,8 @@
+1) Find k-cores of an undirected graph
+
+   Given a graph G and an integer K, K-cores of the graph are connected components that are left after all vertices of degree less than k have been removed.
+   
+2) Count all possible paths between two vertices
+
+   Count the total number of ways or paths that exist between two vertices in a directed graph. 
+   These paths don’t contain a cycle, the simple enough reason is that a cycle contains an infinite number of paths and hence they create a problem.
