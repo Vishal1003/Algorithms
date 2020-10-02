@@ -1,3 +1,52 @@
+/*
+QUESTION:
+Maximum divisors in a Range
+-----------------------------
+You are given two integers a and b. After that, you will be given q queries each of which contains
+two integers low and high. Let’s define S as the set of common divisors of a and b which lie in the range
+low to high i.e. low=d=high. Find the maximum element in this set S or report -1 if no such element is possible.
+
+
+
+INPUT:
+First line contains two integers a and b.
+q lines follow: Each line contains 2 space separated integers denoting low and high
+
+
+OUTPUT:
+Output q lines. Each line denotes maximum divisor which lies in range 
+[low,high]. Report -1 if no such divisor exists.	
+
+
+Constraints:
+1<=q<=10^5
+0<=low,high,a,b<=10^9
+
+
+EXAMPLE:
+input
+8 12
+4
+2 10
+3 7
+2 2 
+5 6
+output
+4
+4
+2
+-1
+
+Sample Test Case Explanation
+For a=8 and b=12, common divisors are [1,2,4].
+1. Between [2,10] and [3,7] maximum common divisor is 4.
+2. Between [2,2] maximum common divisor is 2.
+3. Between [5,6] there is no common divisor, so -1.
+*/
+
+
+//SOLUTION:
+
 #include<bits/stdc++.h>
 using namespace std;
 
