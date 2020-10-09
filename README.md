@@ -57,6 +57,9 @@ Insertion sort works best for already sorted or almost sorted array with time co
 ### Shell Sort
 Shell Sort is an efficient sorting algorithm which is a variant of the Insertion Sort algorithm. We avoid large shifts as compared to Insertion Sort. The worse-case time complexity of shell sort depends on the increment sequence which is O(n<sup>3/2</sup>) and for certain increments O(n<sup>4/3</sup>). For many practical variants, determining their time complexity remains an open problem. 
 
+### Bucket Sort
+Bucket sort is a linear sorting algorithm.Bucket sort is one of the fastest sorting algorithms for numbers or strings of letter. It makes more space compared to other sorting techniques hence less preferable. The time complexity of Bucket sort is O(k*n).In the worst case scenario it can take O(n^2).
+
 
 ### Binary Search
 
@@ -122,10 +125,18 @@ Union: Join two subsets into a single subset.
 
 Union-Find Algorithm can be used to check whether an undirected graph contains cycle or not. Note that we have discussed an algorithm to detect cycle. This is another method based on Union-Find. This method assumes that the graph doesn’t contain any self-loops.
 
+### Bellman Ford Algorithm
+Given a graph and a source vertex src in graph, find shortest paths from src to all vertices in the given graph. The graph may contain negative weight edges.
+We have discussed Dijkstra’s algorithm for this problem. Dijkstra’s algorithm is a Greedy algorithm and time complexity is O(VLogV) (with the use of Fibonacci heap). Dijkstra doesn’t work for Graphs with negative weight edges, Bellman-Ford works for such graphs. Bellman-Ford is also simpler than Dijkstra and suites well for distributed systems. But time complexity of Bellman-Ford is O(VE), which is more than Dijkstra.
+
+
 ### Kruskal's Algorithm (Minimum Spanning Tree)
 
 Kruskal's algorithm finds a minimum spanning forest of an undirected edge-weighted graph. If the graph is connected, it finds a minimum spanning tree. (A minimum spanning tree of a connected graph is a subset of the edges that forms a tree that includes every vertex, where the sum of the weights of all the edges in the tree is minimized. For a disconnected graph, a minimum spanning forest is composed of a minimum spanning tree for each connected component.) It is a greedy algorithm in graph theory as in each step it adds the next lowest-weight edge that will not form a cycle to the minimum spanning forest.
 [ALGORITHM](https://github.com/shubhdeep123/Algorithms/blob/kruskal/kruskalAlgo.md)
+
+### Prim's Algorithm (Minimum Spanning Tree)
+Like Kruskal’s algorithm, Prim’s algorithm is also a Greedy algorithm. It starts with an empty spanning tree. The idea is to maintain two sets of vertices. The first set contains the vertices already included in the MST, the other set contains the vertices not yet included. At every step, it considers all the edges that connect the two sets, and picks the minimum weight edge from these edges. After picking the edge, it moves the other endpoint of the edge to the set containing MST.
 
 ### Topographical Sorting in a DAG (directed acyclic graph)
 
@@ -140,4 +151,8 @@ Segment tree is a data structure that allows us to perform range queries and poi
 ## Cycle Detection in Directed Graph
 Given a directed graph, this program checks whether the graph conatins a cycle or not. The function returns true if the graph conatins at least one cycle , else returns false. Here we use DFS (Depth First Search) to detect the cycle.DFS for a connected graph produces a tree. There is a cycle in a graph only if there is a back edge present in the graph. A back edge is an edge that is from a node to itself (self-loop) or one of its ancestors in the tree produced by DFS.
 [ALGORITHM](CycleDetectionDirectedGraph.cpp). for more info check out [this](https://www.geeksforgeeks.org/detect-cycle-in-a-graph/).
+
+
+### Sweep Line Algorithm
+The algorithm first sorts the end points along the x axis from left to right, then it passes a vertical line through all points from left to right and checks for intersections. The first step is sorting which takes O(nLogn) time. The second step process 2n points and for processing every point, it takes O(Logn) time. Therefore, overall time complexity is O(nLogn).
 
